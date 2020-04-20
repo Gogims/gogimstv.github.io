@@ -1,0 +1,61 @@
+html {
+        background-image: url("images/background.jpg");
+}
+	
+h1{
+	color: white;
+	font-size: 80px;
+	font-family: 'Montserrat';
+	text-align: center;
+	margin-left: 475px;
+}
+
+h2{
+	color: white;
+	font-size: 48px;
+	font-family: 'Montserrat';
+}
+
+.bottom{
+	margin-top: 250px;
+}
+
+.mono{
+	float: right;
+	margin-right: 50px;
+}
+
+.description{
+	color: white;
+	font-size: 36px;
+	font-family: 'Montserrat';
+	margin-left: 15px;
+}
+
+.float-left{
+	float: left;
+	margin-left: 20px;
+}
+
+.bubu{
+	float: left;
+	width: 100px;
+	height: 100px;
+}	
+
+.margin1{
+	margin-top: 140px;
+}
+
+.margin2{
+	margin-top: 238px;
+}
+
+.site__title {
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#afa8a7,#50c35e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+	font-weight: 600;
+  }

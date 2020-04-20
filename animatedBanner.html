@@ -1,0 +1,309 @@
+﻿<html>
+	<head>
+		 <meta charset="utf-8">
+		<title>Final Panels</title>
+		<link rel="stylesheet" type="text/css" href="animatedbanner.css">
+		<link rel="stylesheet" type="text/css" href="animate.css">
+		<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	</head>
+	<body>
+		<div id="discordLogo">
+			<img id="discordLogoImage" src="images\discordLogo.png">
+		</div>
+		<div id="discordText">
+			Se parte de nuestra comunidad en Discord
+		</div>
+		
+		<div id="keepUpToDateText">
+			Mantente al día
+		</div>		
+		<div id="twitter">
+			<img id="twitterLogoImage" src="images\twitterLogo.png">
+			<div id="twitterText">@GogimsTV</div>
+		</div>
+		
+		<div id="latestVideos">
+			Revisa los útimos videos
+		</div>	
+		<div id="youtube">
+			<img id="youtubeLogoImage" src="images\youtubeLogo.png">
+			<div id="youtubeText">@GogimsTV</div>
+		</div>
+		
+		<div id="scheduleHeader">
+			Sintoniza:
+		</div>
+		<div id="scheduleText">
+			Días de Semana:<br />
+			7:00PM - 10:00PM (MX) <br /> 
+			10:00PM - 1:00AM (ARG) <br />
+			<div class="disclaimer">* Horario sujeto a cambios</div>
+		</div>
+		
+		<div id="betterttvLogo">
+			<img id="betterttvLogoImage" src="images\betterttvLogo.png"> <br/>
+			&nbsp;&nbsp;BetterTTV
+		</div>
+		<div id="betterttvText">
+			<div>
+				<div class="left">
+					<img class="emote" src="https://cdn.betterttv.net/emote/55c7eb723d8fd22f20ac9cc1/2x"> <br/>
+					<p class="small">"Prueba"</p>
+				</div>
+				
+				<div class="left">
+					<img class="emote" src="https://cdn.betterttv.net/emote/5814d4e2eb82c03d4c69f39f/2x"> <br/>
+					<p class="small">"Prueba"</p>
+				</div>
+				
+				<div class="left">
+					<img class="emote" src="https://cdn.betterttv.net/emote/580d09ed63c97c037fc9f356/2x"> <br/>
+					<p class="small">"Prueba"</p>
+				</div>
+				
+				<div class="left">
+					<img class="emote" src="https://cdn.betterttv.net/emote/58150968eb82c03d4c69f4a8/2x"> <br/>
+					<p class="small">"Prueba"</p>
+				</div>
+				
+				<div class="left">
+					<img class="emote" src="https://cdn.betterttv.net/emote/58150a44eb82c03d4c69f4aa/2x"> <br/>
+					<p class="small">"Prueba"</p>
+				</div>
+				
+				<div class="left">
+					<img class="emote" src="https://cdn.betterttv.net/emote/581509b3eb82c03d4c69f4a9/2x"> <br/>
+					<p class="small">"Prueba"</p>
+				</div>
+				
+				<div class="left">
+					<img class="emote" src="https://cdn.betterttv.net/emote/55e5658fb8729d3a39595832/2x"> <br/>
+					<p class="small">"Prueba"</p>
+				</div>
+				
+				<div class="left">
+					<img class="emote" src="https://cdn.betterttv.net/emote/55e5658fb8729d3a39595832/2x"> <br/>
+					<p class="small">"Prueba"</p>
+				</div>
+			</div>
+			
+			<br/>
+			
+			<div>
+				¡Baja el addon y utiliza estos emoticones en el chat!
+			</div>
+			
+		</div>
+		
+		<div id="instagram">
+			<img id="instagramLogoImage" src="images\instagram.png">
+		</div>
+		
+		<div id="instagramText">Instagram: gogireyes</div>
+	</body>
+<script>
+var emotes = [
+{name: "GogiHm", link: "https://cdn.betterttv.net/emote/5814d4e2eb82c03d4c69f39f/2x"}, 
+{name: "GogiGuat", link: "https://cdn.betterttv.net/emote/581f49cf59a70f894774388b/2x"}, 
+{name: "GogiRage", link: "https://cdn.betterttv.net/emote/58150968eb82c03d4c69f4a8/2x"}, 
+{name: "GogiMiedo", link: "https://cdn.betterttv.net/emote/58150a44eb82c03d4c69f4aa/2x"}, 
+{name: "GogiMoco", link: "https://cdn.betterttv.net/emote/581509b3eb82c03d4c69f4a9/2x"}, 
+{name: "GogiLove", link: "https://cdn.betterttv.net/emote/5814f961eb82c03d4c69f44e/2x"}, 
+{name: "GogiRIP", link: "https://cdn.betterttv.net/emote/581503eaeb82c03d4c69f48f/2x"},
+{name: "GogiEh", link: "https://cdn.betterttv.net/emote/5814e5aceb82c03d4c69f416/2x"},
+{name: "GogiFail", link: "https://cdn.betterttv.net/emote/581f49a659a70f8947743888/2x"},
+{name: "GogiOk", link: "https://cdn.betterttv.net/emote/581f498959a70f8947743884/2x"},
+{name: "GogiIdea", link: "https://cdn.betterttv.net/emote/58150ab4eb82c03d4c69f4ad/2x"},
+{name: "GogiEnfermo", link: "https://cdn.betterttv.net/emote/58150af0eb82c03d4c69f4b0/2x"},
+{name: "GogiMejor", link: "https://cdn.betterttv.net/emote/5814de2eeb82c03d4c69f406/2x"},
+{name: "GogiUwu", link: "https://cdn.betterttv.net/emote/5814dc16eb82c03d4c69f3f7/2x"},
+{name: "GogiKhe", link: "https://cdn.betterttv.net/emote/5814ec6ceb82c03d4c69f42f/2x"},
+{name: "GogiUy", link: "https://cdn.betterttv.net/emote/581a7bad44677cd650a7fb76/2x"},
+{name: "GogiShh", link: "https://cdn.betterttv.net/emote/581a7b5644677cd650a7fb6e/2x"},
+{name: "GogiYes", link: "https://cdn.betterttv.net/emote/581a7b2c44677cd650a7fb6c/2x"},
+{name: "GogiWave", link: "https://cdn.betterttv.net/emote/581e2f8804c0b6ce502ad073/2x"},
+{name: "GogiAja", link: "https://cdn.betterttv.net/emote/581de68404c0b6ce502acf3c/2x"},
+{name: "GogiUm", link: "https://cdn.betterttv.net/emote/581de99404c0b6ce502acf4a/2x"},
+{name: "GogiUps", link: "https://cdn.betterttv.net/emote/581def9604c0b6ce502acf51/2x"},
+{name: "GogiLol", link: "https://cdn.betterttv.net/emote/581df5c904c0b6ce502acf5d/2x"},
+{name: "GogiHentai", link: "https://cdn.betterttv.net/emote/581dfadf04c0b6ce502acf86/2x"},
+{name: "GogiDinero", link: "https://cdn.betterttv.net/emote/581e1ed504c0b6ce502ad020/2x"},
+{name: "VaultPls", link: "https://cdn.betterttv.net/emote/55cbbe7da486ed0a3360ae9d/2x"},
+{name: "dittoPride", link: "https://cdn.betterttv.net/emote/55e5658fb8729d3a39595832/2x"},
+{name: "RareDan", link: "https://cdn.betterttv.net/emote/565dbee3e4985d7154a26e82/2x"},
+{name: "DogePls", link: "https://cdn.betterttv.net/emote/55c7eb723d8fd22f20ac9cc1/2x"},
+{name: "FeelsBadMan", link: "https://cdn.betterttv.net/emote/566c9fc265dbbdab32ec053b/2x"},
+{name: "FeelsGoodMan", link: "https://cdn.betterttv.net/emote/566c9fde65dbbdab32ec053e/2x"},
+{name: "VapeNation", link: "https://cdn.betterttv.net/emote/56f5be00d48006ba34f530a4/2x"},
+{name: "CarltonPls", link: "https://cdn.betterttv.net/emote/55a0eddc1fe7cb4e415faff2/2x"},
+{name: "Gir", link: "https://cdn.betterttv.net/emote/55d5b566ef2dfa1006836353/2x"},
+{name: "LUL", link: "https://cdn.betterttv.net/emote/567b00c61ddbe1786688a633/2x"},
+{name: "haHAA", link: "https://cdn.betterttv.net/emote/555981336ba1901877765555/2x"},
+{name: "(ditto)", link: "https://cdn.betterttv.net/emote/554da1a289d53f2d12781907/2x"},
+{name: "monkaS", link: "https://cdn.betterttv.net/emote/56e9f494fff3cc5c35e5287e/2x"},
+{name: "ImTriggered", link: "https://cdn.betterttv.net/emote/55b11f64ac9c447a4e565d14/2x"}
+];
+
+$(document).ready(function() {
+	// Do something here to start the animations
+	// You could add a randomiser to play random animation at random interval
+	// or whatever, your imagination is your only limit at this point.
+	AnimateTwitch();
+});
+
+function AnimateInstagram() {
+	$('#instagram').show();
+	$('#instagram').addClass('animated fadeInLeft');
+	$('#instagram').one('webkitAnimationEnd', function() {
+		$('#instagramText').show();
+		$('#instagramText').addClass('animated lightSpeedIn');
+		$('#instagramText').one('webkitAnimationEnd', function() {
+			setTimeout(function() {
+				$('#instagram').removeClass('fadeInLeft');
+				$('#instagramText').removeClass('lightSpeedIn');
+				$('#instagram').addClass('rotateOutUpLeft');
+				$('#instagramText').addClass('rotateOutUpRight');
+				setTimeout(function() {
+					location.reload();
+				}, 720000);
+			}, 7000);
+		
+		});
+	});
+}
+
+function AnimateBetterTTV() {
+	emotes = shuffle(emotes);
+	
+	$('#betterttvText .left').each(function(indx){
+		$(this).find("img").attr('src', emotes[indx].link);
+		$(this).find("p").text(emotes[indx].name);
+	});
+	
+	$('#betterttvLogo').show();
+	$('#betterttvLogo').addClass('animated fadeInLeft');
+	$('#betterttvLogo').one('webkitAnimationEnd', function() {
+		$('#betterttvText').show();
+		$('#betterttvText').addClass('animated lightSpeedIn');
+		$('#betterttvText').one('webkitAnimationEnd', function() {
+			setTimeout(function() {
+				$('#betterttvLogo').removeClass('fadeInLeft');
+				$('#betterttvText').removeClass('lightSpeedIn');
+				$('#betterttvLogo').addClass('rotateOutUpLeft');
+				$('#betterttvText').addClass('rotateOutUpRight');
+				setTimeout(function() {
+					AnimateInstagram();
+				}, 720000);
+			}, 10000);
+		
+		});
+	});
+}
+
+function AnimateYoutube() {
+	$('#latestVideos').show();
+	$('#latestVideos').addClass('animated slideInDown');
+	$('#latestVideos').one('webkitAnimationEnd', function() {
+		$('#youtube').show();
+		$('#youtube').addClass('animated slideInUp');
+		$('#youtube').one('webkitAnimationEnd', function() {
+			setTimeout(function() {
+				$('#latestVideos').removeClass('slideInDown');
+				$('#youtube').removeClass('slideInUp');
+				$('#youtube').addClass('slideOutDown');
+				setTimeout(function() {
+					$('#latestVideos').addClass('SlideOutUp');
+					setTimeout(function() {
+						AnimateBetterTTV();
+					}, 720000);
+				}, 1000);
+			}, 7000);
+		});
+	});
+}
+
+function AnimateSchedule() {
+	$('#scheduleHeader').show();
+	$('#scheduleHeader').addClass('animated swing');
+	$('#scheduleHeader').one('webkitAnimationEnd', function() {
+		$('#scheduleText').show();
+		$('#scheduleText').addClass('animated fadein');
+		$('#scheduleText').one('webkitAnimationEnd', function() {
+			setTimeout(function() {
+				$('#scheduleHeader').removeClass('swing');
+				$('#scheduleText').removeClass('fadein');
+				$('#scheduleHeader').addClass('flipOutX');
+				$('#scheduleText').addClass('hinge');
+				setTimeout(function() {
+					AnimateYoutube();
+				}, 720000);
+			}, 7000);
+		});
+	});
+}
+
+function AnimateTwitter() {
+	$('#keepUpToDateText').show();
+	$('#keepUpToDateText').addClass('animated flash');
+	$('#keepUpToDateText').one('webkitAnimationEnd', function() {
+		$('#twitter').show();
+		$('#twitter').addClass('animated rollin');
+		$('#twitter').one('webkitAnimationEnd', function() {
+			setTimeout(function() {
+				$('#keepUpToDateText').removeClass('flash');
+				$('#twitter').removeClass('rollin');
+				$('#twitter').addClass('rotateOutUpLeft');
+				setTimeout(function() {
+					$('#keepUpToDateText').addClass('flipOutX');
+					setTimeout(function() {
+						AnimateSchedule();
+					}, 720000);
+				}, 1000);
+			}, 7000);
+		});
+	});
+}
+
+function AnimateTwitch() {
+	$('#discordLogo').show();
+	$('#discordLogo').addClass('animated fadeInLeft');
+	$('#discordLogo').one('webkitAnimationEnd', function() {
+		$('#discordText').show();
+		$('#discordText').addClass('animated lightSpeedIn');
+		$('#discordText').one('webkitAnimationEnd', function() {
+			setTimeout(function() {
+				$('#discordLogo').removeClass('fadeInLeft');
+				$('#discordText').removeClass('lightSpeedIn');
+				$('#discordLogo').addClass('rotateOutUpLeft');
+				$('#discordText').addClass('rotateOutUpRight');
+				setTimeout(function() {
+					AnimateTwitter();
+				}, 720000);
+			}, 7000);
+		
+		});
+	});
+}
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+</script>
+</html>

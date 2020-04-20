@@ -1,0 +1,143 @@
+@font-face {
+	font-family: 'Droid Sans', sans-serif;
+}
+	
+body {
+	background: rgba(0, 0, 0, 0);
+	font-family: 'Droid Sans';
+	color: white;
+}
+	
+#discordLogo, #instagram {
+	background:  #427F2D;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+#discordLogoImage, #instagramLogoImage {
+	width: 90px;
+	height: 90px;
+}
+#discordText, #instagramText {
+	width: auto;
+	position: absolute;
+	top: 30px;
+	left: 100px;
+	font-size: 24px;	
+	background: #427F2D;
+	border: 2px solid white;
+	border-radius: 12px 12px 12px 12px;
+	padding: 2px 2px 2px 2px;
+	display: none;
+}
+
+#keepUpToDateText, #latestVideos {
+	width: 400px;
+	height: 25px;
+	background: #427F2D;
+	position: absolute;
+	z-index: 110;
+	top: 0px;
+	left: 0px;
+	font-size: 24px;
+	text-align: center;
+	display: none;
+	-webkit-box-shadow: 0px 0px 20px #0f3369;
+}
+#twitter, #youtube {
+	width: 400px;
+	height: 90px;
+	position: absolute;
+	top: 25px;
+	left: 0px;
+	background: #427F2D;
+	font-size: 40px;
+	display:none;
+}
+#twitterText, #youtubeText {
+	line-height: 40px;
+	vertical-align: center;
+	margin-top: 20px;
+}
+#twitterLogoImage, #youtubeLogoImage {
+	width: 90px;
+	heigth: 90px;
+	float: left;
+	margin-top: 10px;
+}
+
+#scheduleHeader {
+	width: 400px;
+	height: 25px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: #427F2D;
+	font-size: 24px;
+	text-align: center;
+	display: none;
+	-webkit-box-shadow: 0px 0px 20px #0f3369;
+}
+
+#scheduleText {
+	width: 400px;
+	height: 100px;
+	position: absolute;
+	top: 25px;
+	left: 0px;
+	background: #427F2D;
+	font-size: 20px;
+	text-align: center;
+	display: none;
+	-webkit-box-shadow: 0px 0px 20px #0f3369;
+	margin-top: 10px;
+}
+
+#betterttvLogo {
+	background:  #427F2D;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+	height: 124px;
+	font-size: 18px;
+	}
+#betterttvLogoImage {
+	width: 90px;
+	height: 90px;
+	}
+#betterttvText {
+	width: auto;
+	position: absolute;
+	top: 7px;
+	left: 100px;
+	font-size: 24px;
+	background: #427F2D;
+	border: 2px solid white;
+	border-radius: 12px 12px 12px 12px;
+	padding: 2px 2px 2px 2px;
+	display: none;
+}
+
+.left{
+	float: left;
+	margin-left: 5px;
+}
+
+.emote{
+	width: 56px;
+	height: 56px;
+}
+
+.small{
+	font-size: 12px;
+	color: yellow;
+	text-align: center;
+	margin: 0px;
+}
+
+.disclaimer{
+	font-size: 14px;
+	color: yellow;
+}

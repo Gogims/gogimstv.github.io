@@ -7,7 +7,7 @@ GogiBro
 GogiBye
 GogiCalma
 GogiChisme
-GogiComparon
+GogiAh
 Gogidea
 GogiDinero
 GogiEh
@@ -18,7 +18,7 @@ GogiHentai
 GogiHm
 GogiKhe
 GogiLol
-GogiLove
+GogiAmor
 GogiMalo
 GogiMejor
 GogiMiedo
@@ -42,5 +42,5 @@ GogiUm
 GogiUps
 GogiUwu
 GogiUy
-GogiWave
+GogiHola
 GogiYes

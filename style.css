@@ -23,11 +23,11 @@ h2{
 .mono{
 	float: right;
 	margin-right: 50px;
-	margin-top: 27px;
+	margin-top: 9px;
 }
 
 .mona{
-	margin-top: 37px;
+	margin-top: 17px;
 }
 
 .description{
@@ -46,6 +46,8 @@ h2{
 	float: left;
 	width: 100px;
 	height: 100px;
+	margin-top: 29px;
+	margin-left: 125px;
 }	
 
 .margin1{
@@ -53,7 +55,7 @@ h2{
 }
 
 .margin2{
-	margin-top: 210px;
+	margin-top: 229px;
 }
 
 .site__title {
@@ -69,4 +71,9 @@ h2{
 	text-align: center;
 	display: inline-block;
 	margin-left: 350px;
+}
+
+.emote-name {
+	position: relative;
+	bottom: 40px;
 }

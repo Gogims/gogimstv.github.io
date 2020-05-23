@@ -43,7 +43,7 @@
 			<h2 class="site__title emotes">!emotes del canal:</h2>
 			<div id="emotes">
 			  <!-- <img class="bubu" src="images\emotes\1.png" />
-			  <label class="description site__title">GogiAhem</label> -->
+			  <span class="description site__title">GogiAhem</span> -->
 			</div>
 		</div>
 
@@ -76,7 +76,7 @@
 
 			$.get('emotes.txt', function (data) {
 				var lines = data.split("\n");
-				message = '<label class="description site__title">' + lines[random - 1] + '</label>';
+				message = '<span class="description site__title emote-name">' + lines[random - 1] + '</span>';
 				$('#emotes').html(image + message);
 			});
 		}

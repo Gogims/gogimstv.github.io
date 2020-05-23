@@ -101,7 +101,7 @@ h2, .beta {
 #txtJuego{
 	float: right; 
 	font-size: 32px; 
-	bottom: 350px;
+	bottom: 250px;
 	right: 370px;
 }
 
@@ -246,7 +246,7 @@ html {
 
 
 .wrapper {
-  margin: 30px 54px 0px 54px;
+  margin: 41px 54px 0px 54px;
 }
 
 .emotes {

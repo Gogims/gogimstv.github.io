@@ -1,82 +1,99 @@
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />		
-		<title>Stream en espera</title>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
-		<script type="text/javascript" src="morphext.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="style.css" />
-		<link rel="stylesheet" type="text/css" href="waiting.css" />
-		<link rel="stylesheet" type="text/css" href="animate.css" />
-		<link rel="stylesheet" type="text/css" href="morphext.css" />
-	</head>
 
-	<body>		
-		<div class="margin1"></div>
-	
-		<h1><span class="rotate">¡En breve volvemos!, ¡No se vayan lejos!</span></h1>
-		
-		<div id='c'>
-		  <div class='s'></div>
-		  <div class='s'></div>
-		  <div class='s'></div>
-		  <div class='s'></div>
-		  <div class='s'></div>
-		  <div class='s'></div>		  
-		</div>
-		
-		<h1 class="bottom"><span class="rotate">Twitter: , Youtube: </span> <span class="site__title"> GogimsTV</span></h1>
-		
-		<div class="margin2"></div>
-		
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Stream en espera</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="morphext.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="waiting.css" />
+	<link rel="stylesheet" type="text/css" href="animate.css" />
+	<link rel="stylesheet" type="text/css" href="morphext.css" />
+</head>
+
+<body>
+	<div class="margin1"></div>
+
+	<h1><span class="rotate">¡En breve volvemos!, ¡No se vayan lejos!</span></h1>
+
+	<div id='c'>
+		<div class='s'></div>
+		<div class='s'></div>
+		<div class='s'></div>
+		<div class='s'></div>
+		<div class='s'></div>
+		<div class='s'></div>
+	</div>
+
+	<h1 class="bottom"><span class="rotate">Twitter: , Youtube: </span> <span class="site__title"> GogimsTV</span></h1>
+
+	<div class="margin2"></div>
+
+	<div class="wrapper">
 		<div class="float-left">
-			<h2>Mientras tanto Bubu(ina)...</h2>
-			<div id="bubu"/>
-				<img class="bubu" src="images\9.gif" />
-				<label class="description">Juega consola</label>
+			<h2 class="site__title">Mientras tanto...</h2>
+			<div id="bubu">
+				<!-- <img class="bubu" src="images\standby\9.gif" /> -->
 			</div>
 		</div>
-		
+
+		<div class="emotes-wrap">
+			<h2 class="site__title emotes">!emotes del canal:</h2>
+			<div id="emotes">
+			  <!-- <img class="bubu" src="images\emotes\1.png" />
+			  <label class="description site__title">GogiAhem</label> -->
+			</div>
+		</div>
+
 		<div class="mono">
 			<img src="images\mona1.gif" />
 		</div>
-		
+	
 		<div class="mono">
 			<img src="images\mono1.png" width=259 height=258 />
 		</div>
-		
-		<script>		
-			function changeBubu(){
-				var random = Math.floor(Math.random() * 217) + 1 ;				
-				var image = '<img class="bubu" src="images\\' + random + '.gif" />'
-				
-				$.get('bubu.txt', function(data) {
-				   var lines = data.split("\n");				   				   			   				   
-				   message = '<label class="description">' + lines[random - 1] + '</label>';	
-					$('#bubu').html(image + message);
-				});			
-			}			
-		
-			$(document).ready(function(){			
-			  			  
-			  
-			  $(".rotate").Morphext({
-				// The [in] animation type. Refer to Animate.css for a list of available animations.
+	</div>
+
+	<script>
+		function getBetween(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+		function changeBubu() {
+			var random = getBetween(1, 217);
+			var image = '<img class="bubu" src="images\\standby\\' + random + '.gif" />'
+			$('#bubu').html(image);
+		}
+
+		function changeEmote() {
+			var random = getBetween(1, 46);
+			var image = '<img src="images\\emotes\\' + random + '.png" />'
+
+			$.get('emotes.txt', function (data) {
+				var lines = data.split("\n");
+				message = '<label class="description site__title">' + lines[random - 1] + '</label>';
+				$('#emotes').html(image + message);
+			});
+		}
+
+		$(document).ready(function () {
+			$(".rotate").Morphext({
 				animation: "bounceIn",
-				// An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
 				separator: ",",
-				// The delay between the changing of each phrase in milliseconds.
-				speed: 4000,
-				complete: function () {
-					// Called after the entrance animation is executed.
-				}
+				speed: 4000
 			});
-			  
-			  setInterval(changeBubu, 8000);
-			  
-			  	  			  
-			});
-		</script>
-	</body>
+
+			changeBubu();
+			changeEmote();
+			setInterval(changeBubu, 8000);
+			setInterval(changeEmote, 5000);
+		});
+	</script>
+</body>
+
 </html>

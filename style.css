@@ -58,4 +58,10 @@ h2{
     -webkit-text-fill-color: transparent;
     -webkit-animation: hue 60s infinite linear;
 	font-weight: 600;
-  }
+}
+
+.emotes-wrap {
+	text-align: center;
+	display: inline-block;
+	margin-left: 350px;
+}

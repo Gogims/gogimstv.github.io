@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <title>Intro</title>
   <meta charset="utf-8" />
@@ -10,35 +11,67 @@
   <link rel="stylesheet" href="animate.css" />
   <link rel="stylesheet" href="intro-outro.css" />
   <link rel="stylesheet" href="font.css" />
-  
+
   <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 </head>
 
 <body>
-<h2 id="server" class="site__title">Servidor (!discord):</h2>
-<iframe id="discord" src="https://discordapp.com/widget?id=104977989707571200&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
-<header class="site__header island">
-  <div class="wrap">
-   <span id="animationSandbox" style="display: block;"><h1 class="site__title mega">Stream comenzará pronto</h1></span>    
-  </div>  
-</header><!-- /.site__header -->
+  <h2 id="server" class="site__title">Servidor (!discord):</h2>
 
-<div class="wrap"> <img src="images\Bubu.gif" /></div>
+  <iframe id="discord" src="https://discordapp.com/widget?id=104977989707571200&theme=dark" width="350" height="500"
+    allowtransparency="true" frameborder="0"></iframe>
 
-<h2 id="txtJuego" class="site__title">Hoy Jugamos:</h2>
+  <header class="site__header island">
+    <div class="wrap">
+      <span id="animationSandbox" style="display: block;">
+        <h1 class="site__title mega">Stream comenzará pronto</h1>
+      </span>
+    </div>
+  </header>
+
+  <div class="wrap"> 
+    <img src="images\Bubu.gif" />
+    <div class="wrapper">
+      <h2 class="site__title emotes">!emotes del canal:</h2>
+      <div id="emotes">
+        <!-- <img class="bubu" src="images\emotes\1.png" />
+        <label class="description site__title">GogiAhem</label> -->
+      </div>
+    </div>
+  </div>
+
+  <h2 id="txtJuego" class="site__title">Hoy Jugamos:</h2>
 </body>
+
 </html>
 
 <script>
-	function ReloadDiscord()
-	{
-		// hackishly force iframe to reload
-		var iframe = document.getElementById('discord');
-		console.log(iframe);
-		iframe.src = iframe.src;
-	}
+  function ReloadDiscord() {
+    var iframe = document.getElementById('discord');
+    iframe.src = iframe.src;
+  }
 
-	$(document).ready(function(){			
-		setInterval(ReloadDiscord, 30000);
-	});	
+  function getBetween(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function changeEmote(){
+    var random = getBetween(1, 46);
+    var image = '<img class="bubu" src="images\\emotes\\' + random + '.png" />'
+    
+    $.get('emotes.txt', function(data) {
+       var lines = data.split("\n");				   				   			   				   
+       message = '<label class="description site__title">' + lines[random - 1] + '</label>';	
+      $('#emotes').html(image + message);
+    });			
+  }	
+
+  $(document).ready(function () {
+    changeEmote();
+    setInterval(ReloadDiscord, 30000);
+    setInterval(changeEmote, 5000);
+  });	
 </script>

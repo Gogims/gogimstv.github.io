@@ -1,46 +1,77 @@
-
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="utf-8" />
 	<title>Outro</title>
-	  <meta name="viewport" content="initial-scale=1, minimal-ui" />
+	<meta name="viewport" content="initial-scale=1, minimal-ui" />
 
-  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link rel="dns-prefetch" href="//code.jquery.com" />
+	<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+	<link rel="dns-prefetch" href="//code.jquery.com" />
 
-  <link rel="stylesheet" href="animate.css" />
-  <link rel="stylesheet" href="intro-outro.css" />
-  <link rel="stylesheet" href="font.css" />
-  
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+	<link rel="stylesheet" href="animate.css" />
+	<link rel="stylesheet" href="intro-outro.css" />
+	<link rel="stylesheet" href="font.css" />
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 </head>
 
-<body>	
+<body>
 	<h2 id="server" class="site__title mega">Servidor (!discord):</h2>
-	<iframe id="discord" src="https://discordapp.com/widget?id=104977989707571200&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>	
+	<iframe id="discord" src="https://discordapp.com/widget?id=104977989707571200&theme=dark" width="350" height="500"
+		allowtransparency="true" frameborder="0"></iframe>
 	<header class="site__header island">
-	  <div class="wrap">
-	   <span id="animationSandbox" style="display: block;margin-top:70px;"><h1 class="site__title mega">Stream está por terminar</h1></span>    
-	  </div>
-	</header><!-- /.site__header -->	
-	
-	<div class="wrap"> <img src="images\Outro.gif" /></div>
-	
+		<div class="wrap">
+			<span id="animationSandbox" style="display: block;margin-top:70px;">
+				<h1 class="site__title mega">Directo finalizando</h1>
+			</span>
+		</div>
+	</header><!-- /.site__header -->
+
+	<div class="wrap"> 
+		<img src="images\Outro.gif" />
+		
+		<div class="wrapper">
+			<h2 class="site__title emotes">!emotes del canal:</h2>
+			<div id="emotes">
+				<!-- <img class="bubu" src="images\emotes\1.png" />
+				<label class="description site__title">GogiAhem</label> -->
+			</div>
+		</div>
+	</div>
+
 	<h2 id="txtJuego" class="site__title" style="right: 340px;">Próximo Directo:</h2>
-	</body>
+</body>
+
 </html>
 
 <script>
-	function ReloadDiscord()
-	{
-		// hackishly force iframe to reload
+	function ReloadDiscord() {
 		var iframe = document.getElementById('discord');
 		iframe.src = iframe.src;
 	}
 
-	$(document).ready(function(){			
+	function getBetween(min, max) {
+		min = Math.ceil(min);
+		max = Math.floor(max);
+
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	function changeEmote() {
+		var random = getBetween(1, 46);
+		var image = '<img class="bubu" src="images\\emotes\\' + random + '.png" />'
+
+		$.get('emotes.txt', function (data) {
+			var lines = data.split("\n");
+			message = '<label class="description site__title">' + lines[random - 1] + '</label>';
+			$('#emotes').html(image + message);
+		});
+	}
+
+	$(document).ready(function () {
+		changeEmote();
 		setInterval(ReloadDiscord, 30000);
+		setInterval(changeEmote, 5000);
 	});	
 </script>

@@ -23,6 +23,11 @@ h2{
 .mono{
 	float: right;
 	margin-right: 50px;
+	margin-top: 27px;
+}
+
+.mona{
+	margin-top: 37px;
 }
 
 .description{
@@ -48,7 +53,7 @@ h2{
 }
 
 .margin2{
-	margin-top: 238px;
+	margin-top: 210px;
 }
 
 .site__title {

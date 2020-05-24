@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
 
+<html>
 <head>
 	<meta charset="utf-8" />
 	<title>Outro</title>
@@ -28,11 +28,11 @@
 		</div>
 	</header>
 
-	<div class="wrap"> 
+	<div class="wrap">
 		<img src="images\Outro.gif" />
-		
+
 		<div class="wrapper">
-			<h2 class="site__title emotes">!emotes del canal:</h2>
+			<h2 class="site__title emotes">!monos del canal:</h2>
 			<div id="emotes">
 				<!-- <img class="bubu" src="images\emotes\1.png" />
 				<label class="description site__title">GogiAhem</label> -->
@@ -41,37 +41,36 @@
 	</div>
 
 	<h2 id="txtJuego" class="site__title" style="right: 340px;">Próximo Directo:</h2>
+
+	<script>
+		function ReloadDiscord() {
+			var iframe = document.getElementById('discord');
+			iframe.src = iframe.src;
+		}
+	
+		function getBetween(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+	
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+	
+		function changeEmote() {
+			var random = getBetween(1, 46);
+			var image = '<img class="bubu" src="images\\emotes\\' + random + '.png" />'
+	
+			$.get('emotes.txt', function (data) {
+				var lines = data.split("\n");
+				message = '<label class="description site__title">' + lines[random - 1] + '</label>';
+				$('#emotes').html(image + message);
+			});
+		}
+	
+		$(document).ready(function () {
+			changeEmote();
+			setInterval(ReloadDiscord, 30000);
+			setInterval(changeEmote, 5000);
+		});	
+	</script>
 </body>
-
 </html>
-
-<script>
-	function ReloadDiscord() {
-		var iframe = document.getElementById('discord');
-		iframe.src = iframe.src;
-	}
-
-	function getBetween(min, max) {
-		min = Math.ceil(min);
-		max = Math.floor(max);
-
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-	}
-
-	function changeEmote() {
-		var random = getBetween(1, 46);
-		var image = '<img class="bubu" src="images\\emotes\\' + random + '.png" />'
-
-		$.get('emotes.txt', function (data) {
-			var lines = data.split("\n");
-			message = '<label class="description site__title">' + lines[random - 1] + '</label>';
-			$('#emotes').html(image + message);
-		});
-	}
-
-	$(document).ready(function () {
-		changeEmote();
-		setInterval(ReloadDiscord, 30000);
-		setInterval(changeEmote, 5000);
-	});	
-</script>
